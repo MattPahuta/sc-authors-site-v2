@@ -1,29 +1,51 @@
 ---
 import { Image } from "astro:assets";
 import featuredImage from "../assets/mixed-roots.jpg";
+const featuredBuyURL = "https://bookshop.org/a/14863/9780807021361";
 
 const imageAlt = "Mixed Roots bookcover";
 ---
 
 <section class="py-10">
   <!-- wrapper container -->
-  <div class="mx-auto max-w-6xl">
+  <div class="mx-auto max-w-6xl px-4">
     <!-- grid container -->
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-16">
+    <div class="grid md:grid-cols-2 gap-12 md:px-7">
       <!-- grid item - featured content -->
-      <div class="flex flex-col">
-        <p class="uppercase">Latest Book</p>
-        <h2 class="mb-5 text-6xl font-semibold font-playfair">Mixed Roots</h2>
+      <div class="space-y-6 md:space-y-10 flex flex-col">
+        <p class="text-sm uppercase text-accent">Latest Book</p>
+        <h2
+          class="mb-5 text-5xl lg:text-6xl font-semibold font-playfair">
+          Mixed Roots
+        </h2>
         <p class="text-lg leading-relaxed text-zinc-600">
           A powerful anthology combining personal narratives with
           community-oriented perspectives, Mixed Roots features my
           essay, "Learning a Second Language."
         </p>
+        <div class="flex gap-5">
+          <a
+            href={featuredBuyURL}
+            target="_blank"
+            class="text-sm uppercase hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >Buy the book</a
+          >
+          <a
+            href=""
+            class="text-sm uppercase hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+            >All Works</a
+          >
+        </div>
       </div>
       <!-- grid item - featured image -->
-      <div class="text-lg leading-relaxed text-zinc-600">
-        <div class="relative overflow-hidden aspect-3/4 width-full max-w-[400px] shadow-sm">
-          <Image src={featuredImage} alt={imageAlt} class="object-cover w-full h-full" />
+      <div class="flex items-center justify-center md:justify-end">
+        <div
+          class="relative overflow-hidden width-full max-w-85 shadow-lg">
+          <Image
+            src={featuredImage}
+            alt={imageAlt}
+            class="object-cover w-full h-full"
+          />
         </div>
       </div>
     </div>
