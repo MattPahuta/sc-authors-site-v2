@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import profileImage from "../assets/sc-headshot_v1.jpg";
+const profileImageAlt = "Samantha Chagollan headshot";
+import profileImage2 from "../assets/sc-profile-01.jpg";
+const profileImage2Alt =
+  "Samantha Chagollan standing in a lush coastal forest";
+---
+
+<section class="py-10">
+  <!-- wrapper container -->
+  <div class="mx-auto max-w-6xl px-4">
+    <!-- grid container -->
+    <div
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:px-7 md:pb-12">
+      <!-- grid item - featured content -->
+      <div
+        class="space-y-6 md:space-y-10 flex flex-col md:order-2 lg:col-span-2 lg:px-12">
+        <p class="text-sm uppercase text-accent">About</p>
+        <h2
+          class="mb-5 text-2xl md:text-3xl font-semibold font-playfair">
+          Samantha Chagollan
+        </h2>
+        <p class="text-lg leading-relaxed text-zinc-600">
+          Samantha Chagollan is a writer and artist who centers much
+          of her creative work around the themes of home, family, and
+          her mixed Mexican and American heritage. She earned a
+          bachelor's degree in English from Cal Poly Humboldt, where
+          she focused on multicultural literature.
+        </p>
+        <p class="text-lg leading-relaxed text-zinc-600">
+          She has written dozens of books for children and teens, and
+          her creative nonfiction has also been featured in a number
+          of literary journals and in the award-winning anthologies
+          The COVID Monologues and Nonwhite and Woman. She lives in
+          Southern California, where she is currently working on her
+          first memoir, Homesick.
+        </p>
+      </div>
+      <!-- grid item - featured image -->
+      <div class="flex items-center justify-center md:justify-end">
+        <div
+          class="relative overflow-hidden max-w-85 width-full shadow-lg">
+          <Image
+            src={profileImage2}
+            alt={profileImage2Alt}
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
