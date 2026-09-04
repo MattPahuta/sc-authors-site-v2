@@ -4,10 +4,10 @@ import featuredImage from "../assets/mixed-roots.jpg";
 const featuredBuyURL = "https://bookshop.org/a/14863/9780807021361";
 
 const imageAlt = "Mixed Roots bookcover";
+import FeaturedEventBadge from "./FeaturedEventBadge.astro";
 ---
 
 <!-- ToDo: replace border-bottom divier with Divider component -->
-
 <section class="py-10">
   <!-- wrapper container -->
   <div class="mx-auto max-w-6xl px-4">
@@ -41,14 +41,16 @@ const imageAlt = "Mixed Roots bookcover";
         </div>
       </div>
       <!-- grid item - featured image -->
-      <div class="flex items-center justify-center md:justify-end">
-        <div
-          class="relative overflow-hidden width-full max-w-85 shadow-lg">
+      <div
+        class="relative flex items-center justify-center md:justify-end">
+        <div class="relative width-full max-w-85 shadow-lg">
           <Image
             src={featuredImage}
             alt={imageAlt}
             class="object-cover w-full h-full"
           />
+          <!-- Event badge -->
+          <FeaturedEventBadge />
         </div>
       </div>
     </div>
