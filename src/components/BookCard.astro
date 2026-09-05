@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+import mixedRootsThumb from "../assets/mixed-roots_thumb.jpg";
+---
+
+<!-- card -->
+<div class="space-y-4 flex flex-col items-start">
+  <div class="space-y-4">
+    <!-- image -->
+    <div class="w-full max-w-36 overflow-clip shadow-md">
+      <Image
+        src={mixedRootsThumb}
+        alt="Mixed Roots bookcover"
+        class="object-cover w-full h-full"
+      />
+    </div>
+    <!-- content -->
+    <div class="space-y-1 md:space-y-3">
+      <h3 class="text-2xl md:text-3xl font-playfair">Mixed Roots</h3>
+      <p class="text-sm">2026</p>
+      <p class="leading-relaxed">
+        A powerful anthology combining personal narratives with
+        community-oriented perspectives, Mixed Roots features my
+        essay, "Learning a Second Language."
+      </p>
+    </div>
+  </div>
+  <!-- buy link -->
+  <a
+    href=""
+    class="py-1.5 px-3 uppercase tracking-widest inline-flex items-center justify-center border border-neutral-300"
+    >Buy</a
+  >
+</div>

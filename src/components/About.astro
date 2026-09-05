@@ -7,12 +7,11 @@ const profileImage2Alt =
   "Samantha Chagollan standing in a lush coastal forest";
 ---
 
-<section class="py-10">
+<section class="py-10 lg:py-24">
   <!-- wrapper container -->
   <div class="mx-auto max-w-6xl px-4">
     <!-- grid container -->
-    <div
-      class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 md:px-7 md:pb-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
       <!-- grid item - featured content -->
       <div
         class="space-y-6 md:space-y-10 flex flex-col md:order-2 lg:col-span-2 lg:px-12">
@@ -38,9 +37,9 @@ const profileImage2Alt =
         </p>
       </div>
       <!-- grid item - featured image -->
-      <div class="flex items-center justify-center md:justify-end">
+      <div class="flex items-center justify-start md:justify-end">
         <div
-          class="relative overflow-hidden max-w-85 width-full shadow-lg">
+          class="relative overflow-hidden width-full shadow-lg">
           <Image
             src={profileImage2}
             alt={profileImage2Alt}
