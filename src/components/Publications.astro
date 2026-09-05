@@ -1,20 +1,111 @@
 ---
 import BookCard from "./BookCard.astro";
+import { Image } from "astro:assets";
+
+import mixedRootsImage from "../assets/mixed-roots_thumb.jpg";
+import emblazonImage from "../assets/emblazon_thumb.jpg";
+import nonwhiteWomanImage from "../assets/nonwhite-woman_thumb.jpg";
+import covidMonoImage from "../assets/covid-mono_thumb.jpg";
+
+const publications = [
+  {
+    title: "Mixed Roots",
+    year: 2026,
+    description:
+      'A powerful anthology combining personal narratives with community-oriented perspectives, Mixed Roots features my essay, "Learning a Second Language".',
+    image: mixedRootsImage,
+    imageAlt: "Mixed Roots bookcover",
+    url: "https://bookshop.org/a/14863/9780807021361",
+  },
+  {
+    title: "Yellow Arrow Journal, Emblazon",
+    year: 2023,
+    description:
+      'Poetry, creative nonfiction, and cover art on the theme of EMBLAZON by writers and artists who identify as women. This volume features my piece, "End Credits".',
+    image: emblazonImage,
+    imageAlt: "Yellow Arrow Journal bookcover",
+    url: "https://bookshop.org/a/14863/9798988317609",
+  },
+  {
+    title: "Nonwhite and Woman",
+    year: 2022,
+    description:
+      'This IPPY award-winning anthology features 131 microessays by and about women of color, featuring my essay "Mother Tongue".',
+    image: nonwhiteWomanImage,
+    imageAlt: "Nonwhite and Woman bookcover",
+    url: "https://bookshop.org/a/14863/9781949116694",
+  },
+  {
+    title: "The COVID Monologues",
+    year: 2022,
+    description:
+      '54 writers create a living altar to the lives lost to COVID-19, including my piece, "The Blue Moon".',
+    image: covidMonoImage,
+    imageAlt: "The COVID Monologues bookcover",
+    url: "https://bookshop.org/a/14863/9798809306058",
+  },
+];
 ---
 
 <section class="py-10 lg:py-24">
   <!-- wrapper -->
-  <div class="mx-auto max-w-6xl px-4">
+  <div class="mx-auto max-w-6xl px-4 sm:px-5">
     <!-- inner wrapper -->
-    <div class="space-y-8 md:space-y-12">
+    <div class="space-y-10 md:space-y-12">
       <h2
-        class="text-3xl md:text-4xl font-playfair font-light tracking-wide">
+        class="text-2xl md:text-3xl font-semibold font-playfair tracking-wide">
         Publications
       </h2>
-      <!-- publications wrapper -->
-      <div class="grid">
-        <BookCard />
-      </div>
+      <ul class="space-y-6">
+        {
+          publications.map((pub) => (
+            <li class="flex flex-col gap-6 sm:flex-row items-start sm:justify-between">
+              <div class="flex flex-col gap-4 sm:flex-row sm:gap-6">
+                <div class="w-full max-w-36 overflow-clip shadow-md">
+                  <Image
+                    src={pub.image}
+                    alt={pub.imageAlt}
+                    class="object-cover w-full h-full"
+                  />
+                </div>
+                <div class="space-y-2 md:space-y-3">
+                  <h3 class="text-2xl md:text-3xl font-playfair">
+                    {pub.title}
+                  </h3>
+                  <p class="text-sm">{pub.year}</p>
+                  <p class="max-w-prose leading-relaxed text-zinc-600">
+                    {pub.description}
+                  </p>
+                </div>
+              </div>
+              <a
+                href={pub.url}
+                target="_blank"
+                class="py-1.5 px-3 uppercase tracking-widest inline-flex gap-1 items-center justify-center border border-neutral-300 hover:text-accent hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-colors">
+                Buy
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-4">
+                  <>
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </>
+                </svg>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
   <!-- temp div -->
