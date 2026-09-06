@@ -1,24 +1,24 @@
 ---
 import "../styles/global.css";
-import { Font } from 'astro:assets';
-const { title = 'Samantha Chagollan' } = Astro.props;
+import { Font } from "astro:assets";
+const { title = "Samantha Chagollan" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<Font cssVariable="--font-outfit" />
-		<Font cssVariable="--font-playfair" />
-	</head>
-	<body class="min-h-screen bg-stone-50 text-zinc-900 font-sans scroll-smooth">
-		<slot />
-	</body>
+<html lang="en" class="motion-safe:scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <Font cssVariable="--font-outfit" />
+    <Font cssVariable="--font-playfair" />
+  </head>
+  <body class="min-h-screen bg-stone-50 text-zinc-900">
+    <slot />
+  </body>
 </html>
 
 <!-- <style>

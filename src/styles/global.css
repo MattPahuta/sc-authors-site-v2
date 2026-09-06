@@ -4,5 +4,8 @@
   --font-playfair: var(--font-playfair);
   --font-outfit: var(--font-outfit);
 
-  --color-accent: hsl(38, 45%, 38%);
+  /* --color-accent: hsl(38, 45%, 38%); */
+  --color-accent: hsl(28, 52%, 32%);
+
+  --color-milk-choc: hsl(28, 52%, 32%);
 }
