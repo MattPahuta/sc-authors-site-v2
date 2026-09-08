@@ -1,9 +1,15 @@
 ---
-
+const navMenuItems = [
+  { label: "About", href: "#about" },
+  { label: "Publications", href: "#publications" },
+  { label: "Events", href: "#events" },
+  { label: "Other Writing", href: "#otherWriting" },
+  { label: "Contact", href: "#contact" },
+];
 ---
 
 <header class="py-5 border-b border-neutral-300">
-  <div id="wrapper" class="max-w-6xl mx-auto px-4">
+  <div id="wrapper" class="max-w-5xl mx-auto px-4">
     <div
       id="site-header__inner"
       class="flex flex-col gap-5 md:flex-row items-center justify-between">
@@ -13,41 +19,17 @@
       <nav id="primary-nav" class="">
         <ul
           class="max-w-75 md:max-w-full tracking-wide flex items-center justify-center gap-y-2 gap-x-3 lg:gap-5 flex-wrap">
-          <li>
-            <a
-              href="#about"
-              class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="#publications"
-              class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              >Publications</a
-            >
-          </li>
-          <li>
-            <a
-              href="#events"
-              class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              >Events</a
-            >
-          </li>
-          <li>
-            <a
-              href="#otherWriting"
-              class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              >Other Writing</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
-              >Contact</a
-            >
-          </li>
+          {
+            navMenuItems.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </div>
