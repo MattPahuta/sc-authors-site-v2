@@ -9,20 +9,19 @@ const featuredEvent =
     <!-- inner wrapper -->
     <div class="space-y-10 md:space-y-16">
       <!-- section heading -->
-      <h2
-        class="text-2xl md:text-3xl font-semibold font-playfair tracking-wide">
+      <h2 class="text-2xl md:text-3xl font-playfair tracking-wide">
         Events
       </h2>
 
       <!-- featured event card / next appearance -->
-      <div
+      <article
         class="pb-10 px-5 space-y-6 flex flex-col items-start sm:flex-row sm:justify-around border-b border-neutral-300">
         <!-- event content -->
         <div class="">
           <p class="mb-5 text-sm uppercase text-accent">
             Next appearance
           </p>
-          <h3 class="mb-2 text-xl sm:text-2xl font-playfair">
+          <h3 class="mb-2 text-2xl sm:text-3xl font-playfair">
             Third Place Books
           </h3>
           <!-- date / location -->
@@ -56,9 +55,58 @@ const featuredEvent =
           class="py-1.5 px-4 text-sm uppercase inline-flex gap-1 items-center justify-center hover:text-accent focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-accent transition"
           >Get tickets</a
         >
-      </div>
+      </article>
 
       <!-- other events -->
+      <ul
+        class="space-y-10 md:space-y-16 divide-y divide-neutral-300">
+        <li
+          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
+          <span class="mb-5 text-sm uppercase text-zinc-600"
+            >2024</span
+          >
+          <div class="">
+            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
+              Panelist, AWP Conference 2024
+            </h3>
+            <p class="max-w-prose text-sm leading-relaxed">
+              “Snap, Crackle, Prose: Telling Our Stories in 300 Words
+              or Less” and “Latina/o/x Narratives: Including Diverse
+              Experiences From Our Community”
+            </p>
+          </div>
+        </li>
+        <li
+          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
+          <span class="mb-5 text-sm uppercase text-zinc-600"
+            >2024</span
+          >
+          <div class="">
+            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
+              Writers on Writing
+            </h3>
+            <p class="max-w-prose text-sm leading-relaxed">
+              Interview and reading, Yellow Arrow Publishing
+            </p>
+          </div>
+        </li>
+        <li
+          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
+          <span class="mb-5 text-sm uppercase text-zinc-600"
+            >2023</span
+          >
+          <div class="">
+            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
+              Reading
+            </h3>
+            <p class="max-w-prose text-sm leading-relaxed">
+              Libro Mobile for <span class="italic"
+                >Non-White & Woman</span
+              >
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

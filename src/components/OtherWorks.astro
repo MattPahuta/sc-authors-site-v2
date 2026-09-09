@@ -4,11 +4,13 @@ const otherWorks = [
     title: "To The Nurse in the COVID ICU Ward",
     publication: "Months To Years",
     description: "A caring stranger makes a profound difference.",
+    url: "https://monthstoyears.org/to-the-nurse-in-the-covid-icu-ward/",
   },
   {
     title: "Dark Ink",
     publication: "Latin@ Literatures",
     description: "May his memory be a blessing.",
+    url: "https://www.latinoliteratures.org/archives/1771",
   },
   {
     title: "The Chorus and The Refrain",
@@ -27,15 +29,25 @@ const otherWorks = [
   <!-- wrapper container -->
   <div class="mx-auto max-w-5xl px-4 sm:px-5">
     <div class="space-y-10 md:space-y-12">
-      <h2
-        class="text-2xl md:text-3xl font-semibold font-playfair tracking-wide">
+      <h2 class="text-2xl md:text-3xl font-playfair tracking-wide">
         Other Writing
       </h2>
       <ul class="grid sm:grid-cols-2 sm:gap-6 lg:gap-x-16">
         {
           otherWorks.map((work) => (
             <li class="py-6 space-y-3 border-b border-neutral-300">
-              <h3 class="text-lg font-playfair">{work.title}</h3>
+              <h3 class="text-lg font-playfair">
+                {work.url ? (
+                  <a
+                    href={work.url}
+                    target="_blank"
+                    class="hover:text-accent focus-visible:outline-2 focus-visible:outline-accent transition-colors">
+                    {work.title}
+                  </a>
+                ) : (
+                  work.title
+                )}
+              </h3>
               <p class="text-xs uppercase">{work.publication}</p>
               <p class="text-sm">{work.description}</p>
             </li>
