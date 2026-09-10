@@ -15,7 +15,8 @@ import NextEventBadge from "./NextEventBadge.astro";
     <!-- grid container -->
     <div class="grid gap-6 md:grid-cols-[auto_1fr] items-start">
       <!-- grid item - featured image -->
-      <div class="max-w-75 md:max-w-87.5 lg:max-w-93.75 overflow-hidden shadow-lg">
+      <div
+        class="max-w-75 md:max-w-87.5 lg:max-w-93.75 overflow-hidden shadow-lg">
         <Image
           src={profileImage2}
           alt={profileImage2Alt}
@@ -24,28 +25,51 @@ import NextEventBadge from "./NextEventBadge.astro";
       </div>
       <!-- grid item - featured content -->
       <div class="space-y-6 md:space-y-10 flex flex-col lg:px-12">
-        <p class="text-sm uppercase tracking-wide text-accent">
-          About
-        </p>
         <h2
           class="mb-5 text-2xl md:text-3xl font-playfair tracking-wide">
-          Samantha Chagollan
+          About
         </h2>
-        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-          Samantha Chagollan is a writer and artist who centers much
-          of her creative work around the themes of home, family, and
-          her mixed Mexican and American heritage. She earned a
-          bachelor's degree in English from Cal Poly Humboldt, where
-          she focused on multicultural literature.
+        <div
+          class="space-y-1.5 max-w-prose leading-relaxed text-zinc-600">
+          <p>
+            Samantha Chagollan is a southern California writer and
+            artist whose creative nonfiction explores memory, home,
+            belonging, and her mixed Mexican-American heritage. She is
+            currently writing Homesick, a memoir that considers the
+            ways family legacies, cultural inheritance, and the places
+            we call home shape who we become.
+          </p>
+          <p>
+            Her microessays, poems, and other creative work have
+            appeared in Yellow Arrow Journal, Latin@Literatures,
+            Months to Years, and the award-winning anthologies The
+            COVID Monologues and Nonwhite and Woman. Her essay
+            “Learning a Second Language” is featured in the new
+            anthology, Mixed Roots from Beacon Press.
+          </p>
+          <p>
+            Samantha earned a bachelor's degree in English literature
+            from Cal Poly Humboldt, where she studied multicultural
+            literature and the Spanish language. Early chapters in her
+            career spanned publishing, editing, and writing, including
+            writing numerous fiction and non-fiction books for
+            children and teens.
+          </p>
+          <p>
+            These days, her work is increasingly focused on memoir and
+            personal narrative. When she's not writing, Samantha
+            enjoys getting messy with acrylic inks, collaging, and
+            digging into a new block of clay.
+          </p>
+        </div>
+        <!-- <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
         </p>
         <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-          She has written dozens of books for children and teens, and
-          her creative nonfiction has also been featured in a number
-          of literary journals and in the award-winning anthologies
-          The COVID Monologues and Nonwhite and Woman. She lives in
-          Southern California, where she is currently working on her
-          first memoir, Homesick.
         </p>
+        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
+        </p>
+        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
+        </p> -->
       </div>
 
       <!-- next event badge -->
