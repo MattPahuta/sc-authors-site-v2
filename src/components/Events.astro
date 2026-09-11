@@ -7,21 +7,35 @@ const featuredEvent = {
   location: "Lake Forest Park, Washington",
   url: "https://www.eventbrite.com/e/anne-liu-kellor-and-guests-present-mixed-roots-tickets-1998382844884",
 };
+
+const otherEvents = [
+  {
+    name: "Panelist, AWP Conference 2024",
+    description: `“Snap, Crackle, Prose: Telling Our Stories in 300 Words or Less” and “Latina/o/x Narratives: Including Diverse Experiences From Our Community”`,
+    year: 2024,
+  },
+  {
+    name: "Writers on Writing",
+    description:
+      "Featured interview and reading, Yellow Arrow Journal",
+    year: 2024,
+  },
+  {
+    name: "Reading, Diné College Creative Writing",
+    description: "Virtual reading of Nonwhite and Woman",
+    year: 2023,
+  },
+];
 ---
 
 <section id="events" class="py-10 lg:py-24 bg-stone-100">
-  <!-- wrapper container -->
   <div class="mx-auto max-w-5xl px-4 sm:px-5">
-    <!-- inner wrapper -->
     <div class="space-y-10 md:space-y-16">
-      <!-- section heading -->
       <h2 class="text-3xl md:text-4xl font-playfair tracking-wide">
         Events
       </h2>
-      <!-- featured event card / next appearance -->
       <article
-        class="pb-10 px-5 space-y-6 flex flex-col items-start sm:flex-row sm:justify-around border-b border-neutral-300">
-        <!-- event content -->
+        class="pb-10 space-y-6 flex flex-col items-start sm:flex-row sm:justify-around border-b border-neutral-300">
         <div class="">
           <p class="mb-5 text-sm uppercase text-accent">
             Next appearance
@@ -29,7 +43,6 @@ const featuredEvent = {
           <h3 class="mb-2 text-2xl sm:text-3xl font-playfair">
             {featuredEvent.venue}
           </h3>
-          <!-- date / location -->
           <div
             class="mb-2 text-sm sm:text-base flex items-center justify-start">
             <time datetime="2026-10-15">{featuredEvent.date}</time>
@@ -50,66 +63,52 @@ const featuredEvent = {
             >
             <p class="">{featuredEvent.location}</p>
           </div>
-          <!-- event description -->
           <p class="">{featuredEvent.description}</p>
         </div>
-        <!-- event button -->
         <a
           href={featuredEvent.url}
           target="_blank"
-          class="py-1.5 px-4 text-sm uppercase inline-flex gap-1 items-center justify-center hover:text-accent focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-accent transition"
-          >Get tickets</a
+          class="py-1.5 px-4 text-sm uppercase inline-flex gap-2 items-center justify-center hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent transition"
+          >Get tickets
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-3 sm:size-4">
+            <>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </>
+          </svg></a
         >
       </article>
-      <!-- other events -->
       <ul
         class="space-y-10 md:space-y-16 divide-y divide-neutral-300">
-        <li
-          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
-          <span class="mb-5 text-sm uppercase text-zinc-600"
-            >2024</span
-          >
-          <div class="">
-            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
-              Panelist, AWP Conference 2024
-            </h3>
-            <p class="max-w-prose text-sm leading-relaxed">
-              “Snap, Crackle, Prose: Telling Our Stories in 300 Words
-              or Less” and “Latina/o/x Narratives: Including Diverse
-              Experiences From Our Community”
-            </p>
-          </div>
-        </li>
-        <li
-          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
-          <span class="mb-5 text-sm uppercase text-zinc-600"
-            >2024</span
-          >
-          <div class="">
-            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
-              Writers on Writing
-            </h3>
-            <p class="max-w-prose text-sm leading-relaxed">
-              Interview and reading, Yellow Arrow Publishing
-            </p>
-          </div>
-        </li>
-        <li
-          class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
-          <span class="mb-5 text-sm uppercase text-zinc-600"
-            >2023</span
-          >
-          <div class="">
-            <h3 class="mb-2 text-lg sm:text-xl font-playfair">
-              Reading
-            </h3>
-            <p class="max-w-prose text-sm leading-relaxed">
-              Libro Mobile for <span class="italic"
-                >Non-White & Woman</span
-              >
-            </p>
-          </div>
-        </li>
+        {
+          otherEvents.map((event) => (
+            <li class="pb-10 space-y-6 flex flex-col md:flex-row md:gap-8 lg:gap-10">
+              <span class="mb-5 text-sm uppercase text-zinc-600">
+                {event.year}
+              </span>
+              <div class="">
+                <h3 class="mb-2 text-lg sm:text-xl font-playfair">
+                  {event.name}
+                </h3>
+                <p class="max-w-prose text-sm leading-relaxed">
+                  {event.description}
+                </p>
+              </div>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </div>
