@@ -5,32 +5,36 @@ const profileImageAlt = "Samantha Chagollan headshot";
 import profileImage2 from "../assets/sc-profile-02.jpg";
 const profileImage2Alt =
   "Samantha Chagollan standing in a lush coastal forest";
+import aboutImage from "../assets/about-sc.webp";
 
 import NextEventBadge from "./NextEventBadge.astro";
 ---
 
-<section id="about" class="py-10 lg:py-24">
+<section id="about" class="pt-14 lg:pt-24">
   <!-- wrapper container -->
-  <div class="mx-auto max-w-5xl px-4 sm:px-5">
+  <div class="mx-auto max-w-5xl px-4 sm:px-5 grid justify-center gap-8">
     <!-- grid container -->
-    <div class="grid gap-6 md:grid-cols-[auto_1fr] items-start">
-      <!-- grid item - featured image -->
+    <div
+      class="grid gap-14 items-center justify-center lg:grid-cols-[auto_1fr] lg:gap-16">
+      <!-- grid item - image wrapper -->
       <div
-        class="max-w-75 md:max-w-87.5 lg:max-w-93.75 overflow-hidden shadow-lg">
+        class="w-full max-w-100 lg:max-w-108 aspect-3/4 justify-self-center bg-stone-100 border border-neutral-300 overflow-hidden shadow-lg">
         <Image
-          src={profileImage2}
+          src={aboutImage}
           alt={profileImage2Alt}
+          width="500"
+          height="650"
           class="object-cover w-full h-full"
         />
       </div>
-      <!-- grid item - featured content -->
-      <div class="space-y-6 md:space-y-10 flex flex-col lg:px-12">
+      <!-- grid item - about content -->
+      <div class="">
         <h2
-          class="mb-5 text-2xl md:text-3xl font-playfair tracking-wide">
-          About
+          class="mb-6 text-3xl md:text-4xl font-playfair tracking-wide">
+          About Samantha
         </h2>
         <div
-          class="space-y-1.5 max-w-prose leading-relaxed text-zinc-600">
+          class="space-y-4 max-w-prose leading-relaxed text-zinc-600">
           <p>
             Samantha Chagollan is a southern California writer and
             artist whose creative nonfiction explores memory, home,
@@ -62,20 +66,12 @@ import NextEventBadge from "./NextEventBadge.astro";
             digging into a new block of clay.
           </p>
         </div>
-        <!-- <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-        </p>
-        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-        </p>
-        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-        </p>
-        <p class="max-w-prose text-lg leading-relaxed text-zinc-600">
-        </p> -->
       </div>
 
-      <!-- next event badge -->
-      <div class="md:row-start-2">
+    </div>
+    <!-- next event badge -->
+    <div class="md:row-start-2">
         <NextEventBadge />
       </div>
-    </div>
   </div>
 </section>

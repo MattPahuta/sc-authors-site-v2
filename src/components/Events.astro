@@ -1,6 +1,12 @@
 ---
-const featuredEvent =
-  "Anne Liu Kellor and guests present 'Mixed Roots'";
+const featuredEvent = {
+  title: "Mixed Roots",
+  description: "Anne Liu Kellor and guests present 'Mixed Roots'",
+  date: "Oct 15, 2026",
+  venue: "Third Place Books",
+  location: "Lake Forest Park, Washington",
+  url: "https://www.eventbrite.com/e/anne-liu-kellor-and-guests-present-mixed-roots-tickets-1998382844884",
+};
 ---
 
 <section id="events" class="py-10 lg:py-24 bg-stone-100">
@@ -9,10 +15,9 @@ const featuredEvent =
     <!-- inner wrapper -->
     <div class="space-y-10 md:space-y-16">
       <!-- section heading -->
-      <h2 class="text-2xl md:text-3xl font-playfair tracking-wide">
+      <h2 class="text-3xl md:text-4xl font-playfair tracking-wide">
         Events
       </h2>
-
       <!-- featured event card / next appearance -->
       <article
         class="pb-10 px-5 space-y-6 flex flex-col items-start sm:flex-row sm:justify-around border-b border-neutral-300">
@@ -22,12 +27,12 @@ const featuredEvent =
             Next appearance
           </p>
           <h3 class="mb-2 text-2xl sm:text-3xl font-playfair">
-            Third Place Books
+            {featuredEvent.venue}
           </h3>
           <!-- date / location -->
           <div
             class="mb-2 text-sm sm:text-base flex items-center justify-start">
-            <time datetime="2026-10-15">Oct 15, 2026</time>
+            <time datetime="2026-10-15">{featuredEvent.date}</time>
             <svg
               aria-hidden="true"
               focusable="false"
@@ -43,20 +48,19 @@ const featuredEvent =
               class="lucide lucide-dot"
               ><circle cx="12" cy="12" r="1"></circle></svg
             >
-            <p class="">Lake Forest Park, Washington</p>
+            <p class="">{featuredEvent.location}</p>
           </div>
           <!-- event description -->
-          <p class="">{featuredEvent}</p>
+          <p class="">{featuredEvent.description}</p>
         </div>
         <!-- event button -->
         <a
-          href=""
+          href={featuredEvent.url}
           target="_blank"
           class="py-1.5 px-4 text-sm uppercase inline-flex gap-1 items-center justify-center hover:text-accent focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-accent transition"
           >Get tickets</a
         >
       </article>
-
       <!-- other events -->
       <ul
         class="space-y-10 md:space-y-16 divide-y divide-neutral-300">
