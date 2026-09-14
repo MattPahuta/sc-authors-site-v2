@@ -17,12 +17,12 @@ const otherEvents = [
   {
     name: "Writers on Writing",
     description:
-      "Featured interview and reading, Yellow Arrow Journal",
+      'Featured interview and reading, <span class="italic">Yellow Arrow Journal</span>',
     year: 2024,
   },
   {
     name: "Reading, Diné College Creative Writing",
-    description: "Virtual reading of Nonwhite and Woman",
+    description: `Virtual reading of <span class="italic">Nonwhite and Woman</span>`,
     year: 2023,
   },
 ];
@@ -102,9 +102,9 @@ const otherEvents = [
                 <h3 class="mb-2 text-lg sm:text-xl font-playfair">
                   {event.name}
                 </h3>
-                <p class="max-w-prose text-sm leading-relaxed">
-                  {event.description}
-                </p>
+                <p
+                  set:html={event.description}
+                  class="max-w-prose text-sm leading-relaxed"></p>
               </div>
             </li>
           ))

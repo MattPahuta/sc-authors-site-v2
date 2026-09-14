@@ -1,33 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import profileImage from "../assets/sc-headshot_v1.jpg";
-const profileImageAlt = "Samantha Chagollan headshot";
-import profileImage2 from "../assets/sc-profile-02.jpg";
-const profileImage2Alt =
-  "Samantha Chagollan standing in a lush coastal forest";
 import aboutImage from "../assets/about-sc.webp";
-
 import NextEventBadge from "./NextEventBadge.astro";
 ---
 
 <section id="about" class="pt-14 lg:pt-24">
-  <!-- wrapper container -->
-  <div class="mx-auto max-w-5xl px-4 sm:px-5 grid justify-center gap-8">
-    <!-- grid container -->
+  <div
+    class="mx-auto max-w-5xl px-4 sm:px-5 grid justify-center gap-8">
     <div
       class="grid gap-14 items-center justify-center lg:grid-cols-[auto_1fr] lg:gap-16">
-      <!-- grid item - image wrapper -->
       <div
         class="w-full max-w-100 lg:max-w-108 aspect-3/4 justify-self-center bg-stone-100 border border-neutral-300 overflow-hidden shadow-lg">
         <Image
           src={aboutImage}
-          alt={profileImage2Alt}
+          alt="Samantha Chagollan wearing a black shirt with white trim, standing in a lush coastal forest"
           width="500"
           height="650"
           class="object-cover w-full h-full"
         />
       </div>
-      <!-- grid item - about content -->
       <div class="">
         <h2
           class="mb-6 text-3xl md:text-4xl font-playfair tracking-wide">
@@ -39,17 +30,24 @@ import NextEventBadge from "./NextEventBadge.astro";
             Samantha Chagollan is a southern California writer and
             artist whose creative nonfiction explores memory, home,
             belonging, and her mixed Mexican-American heritage. She is
-            currently writing Homesick, a memoir that considers the
-            ways family legacies, cultural inheritance, and the places
-            we call home shape who we become.
+            currently writing <span class="italic">Homesick</span>, a
+            memoir that considers the ways family legacies, cultural
+            inheritance, and the places we call home shape who we
+            become.
           </p>
           <p>
             Her microessays, poems, and other creative work have
-            appeared in Yellow Arrow Journal, Latin@Literatures,
-            Months to Years, and the award-winning anthologies The
-            COVID Monologues and Nonwhite and Woman. Her essay
-            “Learning a Second Language” is featured in the new
-            anthology, Mixed Roots from Beacon Press.
+            appeared in <span class="italic"
+              >Yellow Arrow Journal</span
+            >, <span class="italic">Latin@Literatures</span>, <span
+              class="italic">Months to Years</span
+            >, and the award-winning anthologies <span class="italic"
+              >The COVID Monologues</span
+            >
+            and <span class="italic">Nonwhite and Woman</span>. Her
+            essay “Learning a Second Language” is featured in the new
+            anthology, <span class="italic">Mixed Roots</span>, from
+            Beacon Press.
           </p>
           <p>
             Samantha earned a bachelor's degree in English literature
@@ -67,11 +65,9 @@ import NextEventBadge from "./NextEventBadge.astro";
           </p>
         </div>
       </div>
-
     </div>
-    <!-- next event badge -->
     <div class="md:row-start-2">
-        <NextEventBadge />
-      </div>
+      <NextEventBadge />
+    </div>
   </div>
 </section>
