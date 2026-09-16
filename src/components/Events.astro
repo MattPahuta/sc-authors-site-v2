@@ -17,12 +17,12 @@ const otherEvents = [
   {
     name: "Writers on Writing",
     description:
-      'Featured interview and reading, <span class="italic">Yellow Arrow Journal</span>',
+      'Featured <a href="https://www.yellowarrowpublishing.com/writersonwriting/samantha-chagollan" target="_blank" class="text-accent hover:text-zinc-600 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent transition">interview</a> and <a href="https://www.youtube.com/watch?v=5ciOnwPnCn4" target="_blank" class="text-accent hover:text-zinc-600 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent transition">reading</a>, <span class="italic">Yellow Arrow Journal</span>',
     year: 2024,
   },
   {
     name: "Reading, Diné College Creative Writing",
-    description: `Virtual reading of <span class="italic">Nonwhite and Woman</span>`,
+    description: `<a href="https://www.youtube.com/watch?v=8qBIF6OK6H0" target="_blank" class="text-accent hover:text-zinc-600 focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent transition">Virtual reading</a> of <span class="italic">Nonwhite and Woman</span>`,
     year: 2023,
   },
 ];
@@ -104,7 +104,8 @@ const otherEvents = [
                 </h3>
                 <p
                   set:html={event.description}
-                  class="max-w-prose text-sm leading-relaxed"></p>
+                  class="max-w-prose text-sm leading-relaxed"
+                />
               </div>
             </li>
           ))
