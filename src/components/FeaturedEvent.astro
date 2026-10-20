@@ -1,0 +1,65 @@
+---
+const featuredEvent = {
+  title: "Mixed Roots",
+  description: "Anne Liu Kellor and guests present 'Mixed Roots'",
+  date: "Oct 15, 2026",
+  venue: "Third Place Books",
+  location: "Lake Forest Park, Washington",
+  url: "https://www.eventbrite.com/e/anne-liu-kellor-and-guests-present-mixed-roots-tickets-1998382844884",
+};
+---
+
+<article
+  class="pb-10 space-y-6 flex flex-col items-start sm:flex-row sm:justify-around border-b border-neutral-300">
+  <div class="">
+    <p class="mb-5 text-sm uppercase text-accent">Next appearance</p>
+    <h3 class="mb-2 text-2xl sm:text-3xl font-playfair">
+      {featuredEvent.venue}
+    </h3>
+    <div
+      class="mb-2 text-sm sm:text-base flex items-center justify-start">
+      <time datetime="2026-10-15">{featuredEvent.date}</time>
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-dot"
+        ><circle cx="12" cy="12" r="1"></circle></svg
+      >
+      <p class="">{featuredEvent.location}</p>
+    </div>
+    <p class="">{featuredEvent.description}</p>
+  </div>
+  <a
+    href={featuredEvent.url}
+    target="_blank"
+    class="py-1.5 px-4 text-sm uppercase inline-flex gap-2 items-center justify-center hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent transition"
+    >Get tickets
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="size-3 sm:size-4">
+      <>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </>
+    </svg></a
+  >
+</article>
